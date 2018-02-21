@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        
+        function plus() {
+            var first_number = (document.getElementById("first_number")).value
+            if (first_number == "") {
+                alert("first number is empty")
+            }
+            first_number = Number(first_number)
+            var second_number = (document.getElementById("second_number")).value
+            if (second_number == "") {
+                alert("second number is empty")
+            }
+            second_number = Number(second_number)
+            var output = document.getElementById("output");
+            output.outerHTML = `<p id="output" style="font-size:xx-large">${first_number + second_number}</p >`
+        }
+
+        function minus() {
+            var first_number = (document.getElementById("first_number")).value
+            if (first_number == "") {
+                alert("first number is empty")
+            }
+            first_number = Number(first_number)
+            var second_number = (document.getElementById("second_number")).value
+            if (second_number == "") {
+                alert("second number is empty")
+            }
+            second_number = Number(second_number)
+            var output = document.getElementById("output");
+            output.outerHTML = `<p id="output" style="font-size:xx-large">${first_number - second_number}</p >`
+        }
+
+        function div() {
+            var first_number = (document.getElementById("first_number")).value
+            if (first_number == "") {
+                alert("first number is empty")
+            }
+            first_number = Number(first_number)
+            var second_number = (document.getElementById("second_number")).value
+            if (second_number == "") {
+                alert("second number is empty")
+            }
+            second_number = Number(second_number)
+            var output = document.getElementById("output");
+            output.outerHTML = `<p id="output" style="font-size:xx-large">${first_number/second_number}</p >`
+        }
+
+        function multy(){
+            var first_number = (document.getElementById("first_number")).value
+            if (first_number == "") {
+                alert("first number is empty")
+            }
+            first_number = Number(first_number)
+            var second_number = (document.getElementById("second_number")).value
+            if (second_number == "") {
+                alert("second number is empty")
+            }
+            second_number = Number(second_number)
+            var output = document.getElementById("output");
+            output.outerHTML = `<p id="output" style="font-size:xx-large">${first_number * second_number}</p >`
+        }
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <label>enter first number</label>
+    <input id="first_number"type="text" />
+    <label>enter second number</label>
+    <input id="second_number"type="text"/>
+    <br/>
+    <button onclick="plus()">plus</button>
+    <br />
+    <button  onclick="minus()">minus</button>
+    <br />
+    <button onclick="div()">div</button>
+    <br />
+    <button  onclick="multy()">multy</button>
+    <br/>
+    <p id="output" style="font-size:xx-large">result</p>
+
+
+</body>
+</html>
