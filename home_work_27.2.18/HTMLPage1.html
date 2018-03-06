@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+
+        var countdown;
+        var time_to_display;
+
+        function check_inputs() {
+            var time = document.getElementById("time").value;
+            if (time <= 0) {
+                alert("worng time input")
+            }
+        }
+        function changecolor() {
+            countdown = document.getElementById("time");
+            time_to_display = countdown.value;
+            check_inputs();
+            var usercolor = document.getElementById("color").value
+            document.bgColor = `${usercolor}`
+            var time = document.getElementById("time").value * 1000
+            setTimeout(colorbacktowhite, time)
+            updatertimetowhit()
+          
+          
+        }
+
+        function colorbacktowhite() {
+            document.bgColor = "white";
+            document.getElementById("title").innerHTML = `time to whit is:0`;
+        }
+
+        function updatertimetowhit() {
+            if (time_to_display > 0) {
+                document.getElementById("title").innerHTML = `time to whit is:${time_to_display}`;
+                setTimeout(updatertimetowhit, 1000);
+                time_to_display--;
+            }
+            
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+ <input id="color"type="color"/>
+ <input id="time"type="number"value="0" />
+ <button onclick="changecolor()">clickmy</button><br/>
+<h1 id="title">time to whit is:0</h1> 
+</body>
+</html>
