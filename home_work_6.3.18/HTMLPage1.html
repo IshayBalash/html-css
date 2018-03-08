@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="index.js"></script>
+    <style>
+        .btn{
+            color:red;
+             height:40px;
+             width:50px
+             
+        }
+    </style>
+</head>
+<body onload="setarr()">
+    <div>
+        <label>name</label>
+        <input id="name" type="text"/><br/>
+        <label>age</label>
+        <input id="age" type="number" /><br />
+        <label>date of birth</label>
+        <input id="date" type="date" /><br />
+        <label>color to pic</label>
+        <input id="color" type="color" /><br/>
+        <button class="btn"onclick="save()">save</button>
+        <button class="btn" onclick="printUsersInfo()">show info</button>
+        
+        
+        <hr />
+        <ul id="list">          
+        </ul>
+        
+
+
+
+    </div>
+</body>
+</html>
